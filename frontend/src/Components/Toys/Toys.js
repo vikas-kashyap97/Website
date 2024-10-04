@@ -1,15 +1,16 @@
-import p1_img from './product_48.png';
-import p2_img from './product_49.png';
-import p3_img from './product_50.png';
-import p4_img from './product_51.png';
-import p5_img from './product_52.png';
-import p6_img from './product_53.png';
-import p7_img from './product_54.png';
-import p8_img from './product_55.png';
-import p9_img from './product_56.png';
-import p10_img from './product_58.png';
-import p11_img from './product_59.png';
-import p12_img from './product_60.png';
+import p1_img from '../images/product_ 48.png';
+import p2_img from '../images/product_ 49.png';
+import p3_img from '../images/product_ 50.png';
+import p4_img from '../images/product_ 51.png';
+import p5_img from '../images/product_ 52.png';
+import p6_img from '../images/product_ 53.png';
+import p7_img from '../images/product_ 54.png';
+import p8_img from '../images/product_ 55.png';
+import p9_img from '../images/product_ 56.png';
+import p10_img from '../images/product_ 58.png';
+import p11_img from '../images/product_59.png';
+import p12_img from '../images/product_60.png';
+
 
 
 

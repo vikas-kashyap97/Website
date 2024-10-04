@@ -1,32 +1,28 @@
-// src/Pages/ShopCategory.jsx
-
 import React, { useContext } from 'react';
 import './CSS/ShopCategory.css';
 import { ShopContext } from '../Context/ShopContext';
 import dropdown_icon from '../Components/Assets/dropdown_icon.png';
 import Item from '../Components/Item/Item';
 
-
 const ShopCategory = (props) => {
-  const { girls_product, boys_product, boys_footware, girls_footware, toys_product, essential_product   } = useContext(ShopContext);
-  
-  // Determine which product list to use based on the category
-  let productsToDisplay;
+  const { girls_product, boys_product, boys_footwear, girls_footwear, toys_product, essential_product } = useContext(ShopContext);
 
+  // Initialize productsToDisplay as an empty array by default
+  let productsToDisplay = [];
+
+  // Determine which product list to use based on the category
   if (props.category === "Girls Fashion") {
-    productsToDisplay = girls_product;
+    productsToDisplay = girls_product || [];
   } else if (props.category === "Boys Fashion") {
-    productsToDisplay = boys_product;
+    productsToDisplay = boys_product || [];
   } else if (props.category === "Boys Footwear") {
-    productsToDisplay = boys_footware;
+    productsToDisplay = boys_footwear || [];
   } else if (props.category === "Girls Footwear") {
-    productsToDisplay = girls_footware;
+    productsToDisplay = girls_footwear || [];
   } else if (props.category === "Toys") {
-    productsToDisplay = toys_product;
+    productsToDisplay = toys_product || [];
   } else if (props.category === "Essential") {
-    productsToDisplay = essential_product;
-  } else {
-    productsToDisplay = []; // Fallback or handle default case if needed
+    productsToDisplay = essential_product || [];
   }
 
   return (
