@@ -1,100 +1,100 @@
-import p73_img from './product_37.png';
-import p74_img from './product_38.png';
-import p75_img from './product_39.png';
-import p76_img from './product_40.png';
-import p77_img from './product_41.png';
-import p78_img from './product_42.png';
-import p79_img from './product_43.png';
-import p80_img from './product_44.png';
-import p81_img from './product_45.png';
-import p82_img from './product_46.png';
-import p83_img from './product_47.png';
-import p84_img from './product_48.png';
+import p12_img from './product_12.png';
+import p13_img from './product_13.png';
+import p14_img from './product_14.png';
+import p15_img from './product_15.png';
+import p16_img from './product_16.png';
+import p17_img from './product_17.png';
+import p18_img from './product_18.png';
+import p19_img from './product_19.png';
+import p20_img from './product_20.png';
+import p21_img from './product_21.png';
+import p22_img from './product_22.png';
+import p23_img from './product_23.png';
 
 
 
 let girls_footware = [
   {
-    id: 73,
+    id: 12,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p73_img,
+    image: p12_img,
     new_price: 50.00,
     old_price: 80.50,
   },
   {
-    id: 74,
+    id: 13,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p74_img,
+    image: p13_img,
     new_price: 85.00,
     old_price: 120.50,
   },
   {
-    id: 75,
+    id: 14,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p75_img,
+    image: p14_img,
     new_price: 60.00,
     old_price: 100.50,
   },
   {
-    id: 76,
+    id: 15,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p76_img,
+    image: p15_img,
     new_price: 100.00,
     old_price: 150.00,
   },
   {
-    id: 77,
+    id: 16,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p77_img,
+    image: p16_img,
     new_price: 75.00,
     old_price: 110.50,
   },
   {
-    id: 78,
+    id: 17,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p78_img,
+    image: p17_img,
     new_price: 90.00,
     old_price: 130.50,
   },
   {
-    id: 79,
+    id: 18,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p79_img,
+    image: p18_img,
     new_price: 80.00,
     old_price: 115.50,
   },
   {
-    id: 80,
+    id: 19,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p80_img,
+    image: p19_img,
     new_price: 65.00,
     old_price: 95.50,
   },
   {
-    id: 81,
+    id: 20,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p81_img,
+    image: p20_img,
     new_price: 70.00,
     old_price: 100.50,
   },
   {
-    id: 82,
+    id: 21,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p82_img,
+    image: p21_img,
     new_price: 55.00,
     old_price: 85.50,
   },
   {
-    id: 83,
+    id: 22,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p83_img,
+    image: p22_img,
     new_price: 75.00,
     old_price: 110.50,
   },
   {
-    id: 84,
+    id: 23,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p84_img,
+    image: p23_img,
     new_price: 65.00,
     old_price: 95.50,
   }

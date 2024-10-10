@@ -1,7 +1,6 @@
 // src/Context/ShopContext.jsx
 
-import React, { createContext, useState } from "react";
-import all_product from "../Components/Assets/all_product";
+import React, { createContext, useEffect, useState } from "react";
 import girls_product from "../Components/Girls Fashion/girls"; // Import girls_product
 import boys_product from "../Components/Boys Fashion/boys"; // Import boys_product
 import boys_footwear from "../Components/Boys Footwear/boysf";
@@ -13,16 +12,21 @@ import essential_product from "../Components/Essential/Essential";
 export const ShopContext = createContext(null);
 const getDefaultCart = () =>{
     let Cart = {};
-    for(let index = 0; index < all_product.length+1; index++) {
+    for(let index = 0; index < 300+1; index++) {
         Cart[index] = 0;
     }
     return Cart;
 }
 const ShopContextProvider = (props) => {
 
+    const [all_product, setAll_Product] = useState([]);
     const[cartItems,setCartItems] = useState(getDefaultCart());
     
-    
+    useEffect(()=>{
+        fetch('http://localhost:4000/allproducts')
+        .then((response)=>response.json())
+        .then((data)=>setAll_Product(data))
+    },[])
     
     const addToCart = (productId) => {
         setCartItems((prev) => {

@@ -10,7 +10,7 @@ import p98_img from "./product_98.png";
 import p99_img from "./product_99.png";
 import p100_img from "./product_100.png";
 import p101_img from "./product_101.png";
-import p102_img from "./product_102.png";
+
 
 let toys_product = [
   {
@@ -96,13 +96,6 @@ let toys_product = [
     image: p101_img,
     new_price: 58.00,
     old_price: 87.00,
-},
-{
-    id: 102,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-    image: p102_img,
-    new_price: 57.00,
-    old_price: 85.50,
 },
 ];
 

@@ -10,6 +10,7 @@ import data_product from '../Components/Assets/data';
 
 const Product = () => {
   const { productId } = useParams();
+  const { girls_product, boys_product, boys_footwear, girls_footwear, toys_product, essential_product } = useContext(ShopContext);
   let product = null;
 
   if (new_collections.find((e) => e.id === Number(productId))) {
@@ -17,7 +18,6 @@ const Product = () => {
   } else if (data_product.find((e) => e.id === Number(productId))) {
     product = data_product.find((e) => e.id === Number(productId));
   } else {
-    const { girls_product, boys_product, boys_footwear, girls_footwear, toys_product, essential_product } = useContext(ShopContext);
     product = girls_product?.find((e) => e.id === Number(productId)) ||
               boys_product?.find((e) => e.id === Number(productId)) ||
               boys_footwear?.find((e) => e.id === Number(productId)) ||
