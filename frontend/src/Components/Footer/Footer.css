@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
 }
 .footer-logo p{
     color: #383838;
@@ -22,6 +23,9 @@
     color: #252525;
     font-size: 20px;
 }
+.footer-links li a {
+    text-decoration: none;
+}
 .footer-links li{
     display: flex;
     gap: 20px;
@@ -34,6 +38,7 @@
     border: 1px solid #ebebeb;
     display: inline;
     margin-left: 25px;
+    cursor: pointer;
 }
 .footer-copyright{
     display: flex;

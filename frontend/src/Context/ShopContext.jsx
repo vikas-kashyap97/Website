@@ -20,13 +20,26 @@ const getDefaultCart = () =>{
 const ShopContextProvider = (props) => {
 
     const [all_product, setAll_Product] = useState([]);
-    const[cartItems,setCartItems] = useState(getDefaultCart());
+    const [cartItems, setCartItems] = useState(getDefaultCart());
     
-    useEffect(()=>{
+    useEffect(() => {
+        // Combine all products from different sources
+        const combinedProducts = [
+            ...girls_product,
+            ...boys_product,
+            ...boys_footwear,
+            ...girls_footwear,
+            ...toys_product,
+            ...essential_product
+        ];
+        setAll_Product(combinedProducts);
+        
+        // If you still want to fetch additional products from API
         fetch('http://localhost:4000/allproducts')
-        .then((response)=>response.json())
-        .then((data)=>setAll_Product(data))
-    },[])
+            .then((response) => response.json())
+            .then((data) => setAll_Product(prev => [...prev, ...data]))
+            .catch(error => console.error('Error fetching products:', error));
+    }, []);
     
     const addToCart = (productId) => {
         setCartItems((prev) => {

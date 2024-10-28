@@ -1,0 +1,29 @@
+
+.products {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .product-category {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .product-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .product-box:hover {
+    background-color: #e0e0e0;
+  }

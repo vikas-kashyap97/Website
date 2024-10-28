@@ -3,26 +3,31 @@ import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
-import { ShopContext } from '../../Context/ShopContext';
-import nav_dropdown from '../Assets/nav_dropdown.png'
+import { ShopContext } from "../../Context/ShopContext";
+import nav_dropdown from "../Assets/nav_dropdown.png";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Shop");
-  const{getTotalCartItems} = useContext(ShopContext);
+  const { getTotalCartItems } = useContext(ShopContext);
   const menuRef = useRef();
 
-  const dropdown_toggle = (e) =>{
-      menuRef.current.classList.toggle('nav-menu-visible');
-      e.target.classList.toggle('open');
-  }
+  const dropdown_toggle = (e) => {
+    menuRef.current.classList.toggle("nav-menu-visible");
+    e.target.classList.toggle("open");
+  };
 
   return (
     <div className="navbar">
-      <div className="nav-logo">
+      <Link to="/" className="nav-logo">
         <img src={logo} alt="Logo" />
         <p>SHOPPER</p>
-      </div>
-      <img className='nav-dropdown' onClick={dropdown_toggle} src={nav_dropdown} alt="" />
+      </Link>
+      <img
+        className="nav-dropdown"
+        onClick={dropdown_toggle}
+        src={nav_dropdown}
+        alt=""
+      />
       <ul ref={menuRef} className="nav-menu">
         <li onClick={() => setMenu("Shop")}>
           <Link style={{ textDecoration: "none" }} to="/">
@@ -46,18 +51,18 @@ const Navbar = () => {
 
         <li onClick={() => setMenu("Boys Footwear")}>
           <Link style={{ textDecoration: "none" }} to="/Boys Footwear">
-          Boys Footwear
+            Boys Footwear
           </Link>
-          {menu === "Kids Fashion" && <hr />}
+          {menu === "Boys Footwear" && <hr />} {/* Updated condition */}
         </li>
-
 
         <li onClick={() => setMenu("Girls Footwear")}>
           <Link style={{ textDecoration: "none" }} to="/Girls Footwear">
             Girls Footwear
           </Link>
-          {menu === "Footwear" && <hr />}
+          {menu === "Girls Footwear" && <hr />} {/* Updated condition */}
         </li>
+
         <li onClick={() => setMenu("Toys")}>
           <Link style={{ textDecoration: "none" }} to="/Toys">
             Toys
@@ -73,11 +78,20 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-login-cart">
-      {localStorage.getItem('auth-token')
-      ?<button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}}>Logout</button>
-      :<Link to="/login">
-          <button>Login</button>
-        </Link>}
+        {localStorage.getItem("auth-token") ? (
+          <button
+            onClick={() => {
+              localStorage.removeItem("auth-token");
+              window.location.replace("/");
+            }}
+          >
+            Logout
+          </button>
+        ) : (
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+        )}
 
         <Link to="/Cart">
           <img src={cart_icon} alt="Cart Icon" />

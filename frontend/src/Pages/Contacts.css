@@ -1,0 +1,215 @@
+.contacts-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.contacts-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.contacts-form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    color: #666;
+    font-size: 18px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    color: #666;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #357abd;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #999;
+}
+
+/* Input autofill background */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+/* Social media input styling */
+.input-group input[name="github"],
+.input-group input[name="linkedin"] {
+    padding-left: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contacts-form-container {
+        padding: 20px;
+    }
+
+    .contacts-form-container h2 {
+        font-size: 24px;
+    }
+
+    .input-group input {
+        padding: 10px 35px;
+        font-size: 14px;
+    }
+
+    .input-icon,
+    .toggle-password {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacts-form-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Focus Effects */
+.input-group:focus-within .input-icon {
+    color: #4a90e2;
+}
+
+/* Hover Effects */
+.input-group:hover input {
+    border-color: #bbb;
+}
+
+.toggle-password:hover {
+    color: #4a90e2;
+}
+
+/* Success State */
+.input-group.success input {
+    border-color: #2ecc71;
+}
+
+/* Error State */
+.input-group.error input {
+    border-color: #e74c3c;
+}
+
+/* Loading State for Submit Button */
+.submit-btn.loading {
+    background-color: #999;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Dark Mode Support (if needed) */
+@media (prefers-color-scheme: dark) {
+    .contacts-container {
+        background-color: #2c3e50;
+    }
+
+    .contacts-form-container {
+        background-color: #34495e;
+    }
+
+    .contacts-form-container h2 {
+        color: #ecf0f1;
+    }
+
+    .input-group input {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        border-color: #465669;
+    }
+
+    .input-icon,
+    .toggle-password {
+        color: #bdc3c7;
+    }
+
+    ::placeholder {
+        color: #95a5a6;
+    }
+
+    .error {
+        color: #e74c3c;
+    }
+}
